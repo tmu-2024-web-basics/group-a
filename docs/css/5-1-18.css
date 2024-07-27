@@ -1,0 +1,86 @@
+
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+    position:fixed;
+    z-index: 999;
+	top:0;
+    right: -120%;
+	width:30%;
+    height: 100vh;
+	background:#edb1a4a8;
+	transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+
+/*ナビゲーション*/
+#g-nav ul {
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:45%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: left;
+}
+
+#g-nav li a{
+	color: #444444;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+	position:fixed;
+    z-index: 9999;
+	top:21px;
+	right: 10px;
+	cursor: pointer;
+    width: 120px;
+    height:120px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .4s;
+    position: absolute;
+    left: 120px;
+    height: 120px;
+    background-color: #33333300;
+  	width: 100%;
+  }
+
+.openbtn span:nth-of-type(1) {
+    left: 10px;
+    background-image: url('../image/menu.png');
+}
+
+
+
+.openbtn.active span:nth-of-type(1) {
+    left: 10px;
+    background-image: url('../image/batten.png');
+}
+
+
+
